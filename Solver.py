@@ -54,7 +54,8 @@ if __name__ == '__main__':
     instances_folder = os.path.join(os.path.dirname(__file__), 'low-dimensional')
     
     for instance_file in os.listdir(instances_folder):
-        if instance_file.endswith('.txt'):  
+        # if instance_file.endswith('.txt'): # a instancia 8 demora quase 5 horas para ser executada, então, eu não uso ela sempre  
+        if instance_file.endswith('.txt') and not instance_file.startswith('f8_l-d_kp_23_10000'):  
             filepath = os.path.join(instances_folder, instance_file)
             print(f"\nResolvendo {instance_file}:")
             
